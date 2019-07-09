@@ -39,7 +39,7 @@ def read_config():
 		print('解析链接({})成功,此URL包含{}条ss://链接:'.format(url, len(links)))
 		for l in links:
 			server = {}
-			tag = unquote_plus(re.findall(r'#(.*?)$', 3)[0])
+			tag = unquote_plus(re.findall(r'#(.*?)$', 1)[0])
 			server['remarks'] = '{}'.format(tag)
 			server['timeout'] = 5
 			if '/?' in l:
